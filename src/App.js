@@ -41,16 +41,21 @@ class App extends Component {
         const sortedByName= this.state.allAnimals.sort(function(a, b) {
             const nameA = a.name.toUpperCase();
             const nameB = b.name.toUpperCase();
-            if (nameA < nameB) {
-                return -1;
-            }
-            if (nameA > nameB) {
-                return 1;
-            }
+            if (nameA < nameB) return -1;
+            if (nameA > nameB) return 1;
             return 0;
         });
         this.setState({ allAnimals: sortedByName})
     };
+    sortByAge = () => {
+        const sortedByAge= this.state.allAnimals.sort(function(a, b) {
+            if (a.age < b.age) return -1;
+            if (a.age > b.age) return 1;
+            return 0;
+        });
+        this.setState({ allAnimals: sortedByAge})
+    };
+    
     render() {
 
         const { allAnimals, isLoading, error } = this.state;
@@ -69,7 +74,7 @@ class App extends Component {
                     <table id="animals">
                         <thead>
                         <tr>
-                            <th id="name" onClick={this.sortByName}>Nimi</th><th>Rotu</th><th>Ikä</th><th>Asuinpaikka</th>
+                            <th id="name" onClick={this.sortByName}>Nimi</th><th>Rotu</th><th onClick={this.sortByAge}>Ikä</th><th>Asuinpaikka</th>
                         </tr>
                         </thead>
                         <tbody>
