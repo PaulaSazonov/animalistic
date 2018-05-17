@@ -6,12 +6,6 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      // animals: {
-      //     dogs: [],
-      //     cats: [],
-      //     parrots: [],
-      //     eagles: [],
-      //     },
         dogs: [],
         cats: [],
         parrots: [],
@@ -33,7 +27,6 @@ class App extends Component {
                 throw new Error('Something went wrong ...');
             }
         })
-        // .then(data => this.setState({ animals: data, isLoading: false }))
         .then(data=> this.setState( {dogs: data.dogs, cats: data.cats, parrots: data.parrots, eagles: data.eagles, isLoading: false }))
         .then(this.mergeArrays)
         .catch(error => this.setState({ error, isLoading: false }));
@@ -46,15 +39,14 @@ class App extends Component {
   };
   sortByName = () => {
       const sortedByName= this.state.allAnimals.sort(function(a, b) {
-          const nameA = a.name.toUpperCase(); // ignore upper and lowercase
-          const nameB = b.name.toUpperCase(); // ignore upper and lowercase
+          const nameA = a.name.toUpperCase();
+          const nameB = b.name.toUpperCase();
           if (nameA < nameB) {
               return -1;
           }
           if (nameA > nameB) {
               return 1;
           }
-          // names must be equal
           return 0;
       });
       this.setState({ allAnimals: sortedByName})
