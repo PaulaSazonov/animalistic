@@ -1,0 +1,75 @@
+body {
+    background-color: rgb(218, 212, 220);
+    font-family: 'Raleway', sans-serif;
+}
+.container {
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    padding-bottom: 5%;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+
+}
+
+h1 {
+    font-weight: lighter;
+    font-size: 4em;
+    letter-spacing: 0.15em;
+    background-color: rgb(151, 139, 154);
+    height: 10%;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    color: white;
+    margin-top: 0%;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+
+#tablediv {
+    style: "overflow-x:auto;"
+}
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 95%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding-bottom: 5em;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: rgb(151, 139, 154) 3px;
+}
+th {
+    background-color: #f2f2f2;
+    border-bottom: solid rgb(151, 139, 154) 1px;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+th:hover{cursor: pointer}
+#nametd{
+    text-align: left;
+    padding-right: 1em;
+    border-bottom: rgb(151, 139, 154) 3px;
+}
+#breedtd{
+    text-align: left;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#agetd {
+    text-align: left;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+#locationtd {
+    text-align: left;
+    padding-left: 1em;
+}
